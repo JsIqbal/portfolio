@@ -1,8 +1,9 @@
-/**
- * @type {import('next').NextConfig}
- */
-const nextConfig = {
-    /* config options here */
-};
+module.exports = {
+    basePath: "/next-portfolio",
+    assetPrefix: "/next-portfolio/",
+    output: "static", // Enable static HTML export
 
-module.exports = nextConfig;
+    // Optionally, you can add other configurations as well.
+    // For example, you can set a trailing slash for exported paths:
+    trailingSlash: true,
+};
