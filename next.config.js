@@ -1,9 +1,8 @@
 module.exports = {
-    basePath: "/next-portfolio",
-    assetPrefix: "/next-portfolio/",
-    output: "static", // Enable static HTML export
+  basePath: '/your-repo-name', // Replace 'your-repo-name' with your GitHub repository name
+  assetPrefix: '/your-repo-name/', // Replace 'your-repo-name' with your GitHub repository name
+  output: 'export', // Enable static HTML export
 
-    // Optionally, you can add other configurations as well.
-    // For example, you can set a trailing slash for exported paths:
-    trailingSlash: true,
+  // Add other configurations if needed
 };
+
