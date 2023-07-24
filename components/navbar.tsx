@@ -61,7 +61,7 @@ export const Navbar = () => {
                 <NavbarBrand as="li" className="gap-3 max-w-fit">
                     <NextLink
                         className="flex justify-start items-center gap-1"
-                        href="/"
+                        href="https://jsiqbal.github.io/next-portfolio"
                     >
                         <Logo />
                         <p className="font-bold text-inherit">IQBAL</p>
