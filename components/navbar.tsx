@@ -29,7 +29,7 @@ import {
 } from "@/components/icons";
 
 import { Logo } from "@/components/icons";
-import { basePath } from "@/next.config";
+import siteConfig from "@/next.config";
 
 export const Navbar = () => {
      const basePath = siteConfig.basePath || "";
