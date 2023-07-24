@@ -10,7 +10,7 @@ export const siteConfig = {
     navItems: [
         {
             label: "Home",
-            href: `${basePath}`,
+            href: `${basePath}/`,
         },
         {
             label: "Docs",
