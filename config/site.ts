@@ -7,7 +7,7 @@ export const siteConfig = {
     navItems: [
         {
             label: "Home",
-            href: "/",
+            href: "https://jsiqbal.github.io/next-portfolio",
         },
         {
             label: "Docs",
