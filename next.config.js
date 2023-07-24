@@ -4,7 +4,7 @@ module.exports = {
     output: "export", // Enable static HTML export
 
     // Add other configurations if needed
-    homepage: "https://JsIqbal.github.io/next-portfolio",
+    homepage: "https://jsiqbal.github.io/next-portfolio",
 };
 
 // /**
