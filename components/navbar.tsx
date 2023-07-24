@@ -29,10 +29,10 @@ import {
 } from "@/components/icons";
 
 import { Logo } from "@/components/icons";
-import siteConfig from "@/next.config";
+import { basePath } from "@/next.config";
 
 export const Navbar = () => {
-     const basePath = siteConfig.basePath || "";
+     const path = basePath || "";
     
     const searchInput = (
         <Input
@@ -64,7 +64,7 @@ export const Navbar = () => {
                 <NavbarBrand as="li" className="gap-3 max-w-fit">
                     <NextLink
                         className="flex justify-start items-center gap-1"
-                        href={basePath + "/"}
+                        href={path + "/"}
                     >
                         <Logo />
                         <p className="font-bold text-inherit">IQBAL</p>
