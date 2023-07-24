@@ -1,13 +1,16 @@
 export type SiteConfig = typeof siteConfig;
 
+import { basePath } from "@/next.config";
+
 export const siteConfig = {
-    name: "Next.js + NextUI",
+    name: "portfolio v-1",
     description:
         "Make beautiful websites regardless of your design experience.",
+    homepage: "https://jsiqbal.github.io/next-portfolio",
     navItems: [
         {
             label: "Home",
-            href: "https://jsiqbal.github.io/next-portfolio",
+            href: `${basePath + "/"}`,
         },
         {
             label: "Docs",
