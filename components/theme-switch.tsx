@@ -57,7 +57,8 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
                     class: clsx(
                         [
                             "w-auto h-auto",
-                            "bg-transparent",
+                            theme === "light" ? "bg-white" : "bg-transparent",
+                            theme === "light" ? "text-black" : "text-white", // Set text color to black in light mode and white in dark mode
                             "rounded-lg",
                             "flex items-center justify-center",
                             "group-data-[selected=true]:bg-transparent",
