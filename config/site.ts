@@ -1,7 +1,5 @@
 export type SiteConfig = typeof siteConfig;
 
-import { basePath } from "@/next.config";
-
 export const siteConfig = {
     name: "portfolio v-1",
     description:
@@ -10,7 +8,7 @@ export const siteConfig = {
     navItems: [
         {
             label: "Home",
-            href: `${basePath}/`,
+            href: `/next-portfolio`,
         },
         {
             label: "Docs",
