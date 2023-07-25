@@ -4,9 +4,8 @@ import "@/styles/globals.css";
 
 import clsx from "clsx";
 
-// import Profile from "@/components/profile-card";
-
 import { ReactNode } from "react";
+import { ProfileCard } from "./profile-card";
 // import SocialProfile from "./social-profile";
 
 function GridDefault({ children }: { children: ReactNode }) {
@@ -20,7 +19,7 @@ function GridDefault({ children }: { children: ReactNode }) {
                             " p-4 w-2/3 m-auto mb-[-200px]"
                         )}
                     >
-                        {/* <Profile /> */}
+                        <ProfileCard />
                         <p>one</p>
                     </div>
 
