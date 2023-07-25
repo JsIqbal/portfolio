@@ -8,7 +8,7 @@ export const siteConfig = {
     navItems: [
         {
             label: "Home",
-            href: `/next-portfolio`,
+            href: `/`,
         },
         {
             label: "Docs",
