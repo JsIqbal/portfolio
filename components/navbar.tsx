@@ -32,7 +32,7 @@ import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
     return (
-        <NextUINavbar maxWidth="2xl" position="sticky">
+        <NextUINavbar position="sticky">
             <NavbarContent
                 className="basis-1/5 sm:basis-full w-full "
                 justify="start"
