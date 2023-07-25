@@ -22,6 +22,20 @@ To create a new project based on this template using `create-next-app`, run the 
 npx create-next-app -e https://github.com/nextui-org/next-app-template
 ```
 
+```bash
+npm i @nextui-org/react@dev-v2 framer-motion
+```
+
+-   customize the provider:
+
+```code
+import { NextUIProvider } from "@nextui-org/react";
+```
+
+use NEXTUI v-2 docs:
+
+-   [NextUI v2](https://nextui-docs-v2.vercel.app/)
+
 ### Install dependencies
 
 ```bash
