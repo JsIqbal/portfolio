@@ -4,7 +4,7 @@ export const siteConfig = {
     name: "portfolio v-1",
     description:
         "Make beautiful websites regardless of your design experience.",
-    homepage: "https://jsiqbal.github.io/next-portfolio",
+    homepage: "https://jsiqbal.github.io/portfolio",
     navItems: [
         {
             label: "Home",
