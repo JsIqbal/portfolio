@@ -1,6 +1,6 @@
 {
-    "name": "next-portfolio",
-    "homepage": "https://jsiqbal.github.io/next-portfolio",
+    "name": "portfolio",
+    "homepage": "https://jsiqbal.github.io/portfolio",
     "version": "0.0.1",
     "private": true,
     "scripts": {
