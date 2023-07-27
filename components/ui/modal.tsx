@@ -1,16 +1,13 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Modal, Button, Text } from "@nextui-org/react";
+import toast from "react-hot-toast";
 
 export default function MailModal() {
-    const [visible, setVisible] = React.useState(false);
-    const handler = () => setVisible(true);
-    const closeHandler = () => {
-        setVisible(false);
-        console.log("closed");
-    };
+    const [open, setOpen] = useState(false);
+
     const form: React.RefObject<HTMLFormElement> = useRef(null);
 
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -30,8 +27,7 @@ export default function MailModal() {
                 )
                 .then(
                     (result) => {
-                        console.log(result.text);
-                        closeHandler(); // Close the modal after sending the email
+                        toast.success("Mail sent successfully.");
                     },
                     (error) => {
                         console.log(error.text);
@@ -42,15 +38,15 @@ export default function MailModal() {
 
     return (
         <div>
-            <Button auto color="warning" shadow onPress={handler}>
+            <Button auto color="warning" shadow onPress={() => setOpen(true)}>
                 Mail me!
             </Button>
             <Modal
                 closeButton
                 blur
                 aria-labelledby="modal-title"
-                open={visible}
-                onClose={closeHandler}
+                open={open}
+                onClose={() => setOpen(false)}
             >
                 <form ref={form} onSubmit={sendEmail} className="p-6 bg-white">
                     <Text id="modal-title" size={18} className="mb-4 font-bold">
@@ -85,6 +81,7 @@ export default function MailModal() {
                     </div>
                     <div>
                         <Button
+                            onClick={() => setOpen(false)}
                             auto
                             type="submit"
                             className="w-full text-white bg-primary rounded border border-primary p-3 transition hover:bg-opacity-90"
