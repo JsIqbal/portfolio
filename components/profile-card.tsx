@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, Col, Row, Button, Text } from "@nextui-org/react";
+import { Card, Col, Row, Text } from "@nextui-org/react";
 import MailModal from "./ui/modal";
 
 export const ProfileCard = () => (
@@ -51,16 +51,6 @@ export const ProfileCard = () => (
                 </Col>
                 <Col>
                     <Row justify="flex-end">
-                        {/* <Button flat auto rounded color="secondary">
-                            <Text
-                                css={{ color: "inherit" }}
-                                size={12}
-                                weight="bold"
-                                transform="uppercase"
-                            >
-                                Notify Me
-                            </Text>
-                        </Button> */}
                         <MailModal />
                     </Row>
                 </Col>

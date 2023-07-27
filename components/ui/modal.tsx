@@ -1,67 +1,96 @@
 "use client";
 
-import React from "react";
-import { Modal, Input, Row, Checkbox, Button, Text } from "@nextui-org/react";
-import { Mail } from "@/components/ui/mail";
-import { Subject } from "@/components/ui/password";
-import TextArea from "@/components/ui/text-area";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { Modal, Button, Text } from "@nextui-org/react";
+import toast from "react-hot-toast";
 
 export default function MailModal() {
-    const [visible, setVisible] = React.useState(false);
-    const handler = () => setVisible(true);
-    const closeHandler = () => {
-        setVisible(false);
-        console.log("closed");
+    const [open, setOpen] = useState(false);
+
+    const form: React.RefObject<HTMLFormElement> = useRef(null);
+
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (form.current) {
+            const YOUR_SERVICE_ID = "service_u342xrg";
+            const YOUR_TEMPLATE_ID = "template_hsx74t7";
+            const YOUR_PUBLIC_KEY = "uB8TN-aUhdfZeVPTq";
+
+            emailjs
+                .sendForm(
+                    YOUR_SERVICE_ID,
+                    YOUR_TEMPLATE_ID,
+                    form.current,
+                    YOUR_PUBLIC_KEY
+                )
+                .then(
+                    (result) => {
+                        toast.success("Mail sent successfully.");
+                    },
+                    (error) => {
+                        console.log(error.text);
+                    }
+                );
+        }
     };
+
     return (
         <div>
-            <Button auto color="warning" shadow onPress={handler}>
+            <Button auto color="warning" shadow onPress={() => setOpen(true)}>
                 Mail me!
             </Button>
             <Modal
                 closeButton
                 blur
                 aria-labelledby="modal-title"
-                open={visible}
-                onClose={closeHandler}
+                open={open}
+                onClose={() => setOpen(false)}
             >
-                <Modal.Header>
-                    <Text id="modal-title" size={18}>
-                        Get in
-                        <Text b size={18}>
-                            Touch!
-                        </Text>
+                <form ref={form} onSubmit={sendEmail} className="p-6 bg-white">
+                    <Text id="modal-title" size={18} className="mb-4 font-bold">
+                        Get in <span className="text-primary">Touch!</span>
                     </Text>
-                </Modal.Header>
-                <Modal.Body>
-                    <Input
-                        clearable
-                        bordered
-                        fullWidth
-                        color="primary"
-                        size="lg"
-                        placeholder="Email"
-                        contentLeft={<Mail fill="currentColor" />}
-                    />
-                    <Input
-                        clearable
-                        bordered
-                        fullWidth
-                        color="primary"
-                        size="lg"
-                        placeholder="Subject"
-                        contentLeft={<Subject fill="currentColor" />}
-                    />
-                    <TextArea />
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button auto flat color="error" onPress={closeHandler}>
-                        Close
-                    </Button>
-                    <Button auto onPress={closeHandler}>
-                        Send
-                    </Button>
-                </Modal.Footer>
+                    <div className="mb-6">
+                        <input
+                            required
+                            type="text"
+                            placeholder="Your Name"
+                            className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
+                            name="from_name"
+                        />
+                        {/* hell */}
+                    </div>
+                    <div className="mb-6">
+                        <input
+                            required
+                            type="email"
+                            placeholder="Your Email"
+                            className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
+                            name="user_email"
+                        />
+                    </div>
+                    <div className="mb-6">
+                        <textarea
+                            required
+                            rows={6}
+                            placeholder="Your Message"
+                            className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] resize-none outline-none focus-visible:shadow-none focus:border-primary"
+                            name="message"
+                        />
+                    </div>
+                    <div>
+                        <Button
+                            onClick={() => setOpen(false)}
+                            auto
+                            type="submit"
+                            className="w-full text-white bg-primary rounded border border-primary p-3 transition hover:bg-opacity-90"
+                        >
+                            Send Message
+                        </Button>
+                    </div>
+                </form>
             </Modal>
         </div>
     );
