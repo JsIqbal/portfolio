@@ -2,6 +2,7 @@
 
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 import MailModal from "./ui/modal";
+import { ContactUs } from "@/components/api/contact";
 
 export const ProfileCard = () => (
     <Card css={{ w: "100%", h: "400px" }}>
@@ -61,7 +62,8 @@ export const ProfileCard = () => (
                                 Notify Me
                             </Text>
                         </Button> */}
-                        <MailModal />
+                        {/* <MailModal /> */}
+                        <ContactUs />
                     </Row>
                 </Col>
             </Row>
