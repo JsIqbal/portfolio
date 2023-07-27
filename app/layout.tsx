@@ -7,9 +7,6 @@ import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import GridDefault from "@/components/grid-default";
-import { config } from "dotenv";
-
-config();
 
 export const metadata: Metadata = {
     title: {
