@@ -6,6 +6,8 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
+
+import { ToastProvider } from "@/providers/toast-provider";
 import GridDefault from "@/components/grid-default";
 
 export const metadata: Metadata = {
@@ -40,6 +42,7 @@ export default function RootLayout({
                     fontSans.variable
                 )}
             >
+                <ToastProvider />
                 <Providers
                     themeProps={{ attribute: "class", defaultTheme: "dark" }}
                 >
