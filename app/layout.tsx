@@ -52,7 +52,7 @@ export default function RootLayout({
                             <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
                                 <ProfileSummary />
 
-                                <div className="col-span-1 md:col-span-4 bg-sky-500/75">
+                                <div className="col-span-1 md:col-span-4 relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                                     {children}
                                 </div>
                             </div>
