@@ -93,3 +93,11 @@ Licensed under the [MIT license](https://github.com/nextui-org/next-app-template
     }
 }
 ```
+
+### To make the .env properties available use following format:
+
+```code
+NEXT_PUBLIC_PUBLIC_KEY=
+NEXT_PUBLIC_SERVICE_ID=
+NEXT_PUBLIC_TEMPLATE_ID=
+```

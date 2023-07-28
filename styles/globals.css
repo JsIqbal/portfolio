@@ -1,3 +1,94 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Base styles for the card */
+.card {
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap on small screens */
+    align-items: center;
+    justify-content: center;
+    padding: 25px 10px; /* Adjust padding for smaller screens */
+    gap: 10px; /* Reduce the gap between social containers on smaller screens */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    border-radius: 0px 0px 12px 12px;
+}
+
+/* Social container styles */
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+}
+
+/* Hover styles for all social containers */
+.containerOne:hover {
+    background-color: #d62976;
+}
+
+.containerTwo:hover {
+    background-color: #00acee;
+}
+
+.containerThree:hover {
+    background-color: #0072b1;
+}
+
+.containerFour:hover {
+    background-color: #128c7e;
+}
+
+.containerFive {
+    color: aliceblue;
+}
+
+/* Active styles for all social containers */
+.socialContainer:active {
+    transform: scale(0.9);
+}
+
+/* SVG styles */
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+/* Animation for SVG */
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .card {
+        padding: 15px 5px; /* Adjust padding for smaller screens */
+        gap: 5px; /* Reduce the gap between social containers on smaller screens */
+    }
+    .socialContainer {
+        width: 40px;
+        height: 40px;
+    }
+}

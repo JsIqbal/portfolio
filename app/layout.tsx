@@ -4,11 +4,11 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 
 import { ToastProvider } from "@/providers/toast-provider";
-import GridDefault from "@/components/grid-default";
+import Footer from "@/components/footer";
+import ProfileSummary from "@/components/profile-summary";
 
 export const metadata: Metadata = {
     title: {
@@ -49,21 +49,15 @@ export default function RootLayout({
                     <div className="relative flex flex-col h-screen">
                         <Navbar />
                         <main className="container mx-auto  pt-16 px-6 flex-grow ">
-                            <GridDefault>{children}</GridDefault>
+                            <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+                                <ProfileSummary />
+
+                                <div className="col-span-1 md:col-span-4 relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                                    {children}
+                                </div>
+                            </div>
                         </main>
-                        <footer className="w-full flex items-center justify-center py-3">
-                            <Link
-                                isExternal
-                                className="flex items-center gap-1 text-current"
-                                href="https://github.com/JsIqbal"
-                                title="nextui.org homepage"
-                            >
-                                <span className="text-default-600">
-                                    Powered by
-                                </span>
-                                <p className="text-primary">JSIqbal</p>
-                            </Link>
-                        </footer>
+                        <Footer />
                     </div>
                 </Providers>
             </body>

@@ -68,5 +68,7 @@ export const siteConfig = {
         facebook: "https://www.facebook.com/javascriptiqbal",
         discord: "https://discord.com/channels/jsiqbal#0898",
         sponsor: "https://patreon.com/jrgarciadev",
+        instagram: "https://www.instagram.com/iqbal_sabbir/",
+        linkedin: "https://www.linkedin.com/in/jsiqbal/",
     },
 };
