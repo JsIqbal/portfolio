@@ -14,7 +14,9 @@ export default function MailModal() {
         e.preventDefault();
 
         if (form.current) {
-            const YOUR_SERVICE_ID = "service_u342xrg";
+            // const YOUR_SERVICE_ID = "service_u342xrg";
+            const YOUR_SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID || "";
+            console.log("Your service", YOUR_SERVICE_ID);
             const YOUR_TEMPLATE_ID = "template_hsx74t7";
             const YOUR_PUBLIC_KEY = "uB8TN-aUhdfZeVPTq";
 

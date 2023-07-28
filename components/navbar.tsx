@@ -90,34 +90,6 @@ export const Navbar = () => {
                 justify="end"
             >
                 <NavbarItem className="hidden sm:flex gap-2">
-                    <Link
-                        isExternal
-                        href={siteConfig.links.twitter}
-                        aria-label="Twitter"
-                    >
-                        <TwitterIcon className="text-default-500" />
-                    </Link>
-                    <Link
-                        isExternal
-                        href={siteConfig.links.discord}
-                        aria-label="Discord"
-                    >
-                        <DiscordIcon className="text-default-500" />
-                    </Link>
-                    <Link
-                        isExternal
-                        href={siteConfig.links.facebook}
-                        aria-label="Facebook"
-                    >
-                        <FacebookIcon className="text-default-500 pt-1.5" />
-                    </Link>
-                    <Link
-                        isExternal
-                        href={siteConfig.links.github}
-                        aria-label="Github"
-                    >
-                        <GithubIcon className="text-default-500" />
-                    </Link>
                     <ThemeSwitch />
                 </NavbarItem>
                 <NavbarItem className="hidden lg:flex">
