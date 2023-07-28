@@ -1,8 +1,7 @@
 "use client";
 
 import { Card, Col, Row, Text } from "@nextui-org/react";
-import MailModal from "./ui/modal";
-import { Link } from "@nextui-org/link";
+import MailModal from "./mail-modal";
 import { siteConfig } from "@/config/site";
 import { GithubIcon } from "./icons";
 import ToolTipTool from "./ui/tooltip";
@@ -24,18 +23,6 @@ export const ProfileCard = () => (
                         content="Let's connet to Github"
                         href={siteConfig.links.github}
                     />
-                    {/* <Link
-                        isExternal
-                        href={siteConfig.links.github}
-                        aria-label="Github"
-                    ></Link> */}
-                    {/* <Link
-                        isExternal
-                        href={siteConfig.links.discord}
-                        aria-label="Discord"
-                    >
-                        <DiscordIcon className="text-default-500" />
-                    </Link> */}
                 </Text>
             </Col>
         </Card.Header>
