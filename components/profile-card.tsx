@@ -5,6 +5,7 @@ import MailModal from "./mail-modal";
 import { siteConfig } from "@/config/site";
 import { GithubIcon } from "./icons";
 import ToolTipTool from "./ui/tooltip";
+import Image from "next/image";
 
 export const ProfileCard = () => (
     <Card css={{ w: "100%", h: "400px" }}>
@@ -27,12 +28,18 @@ export const ProfileCard = () => (
             </Col>
         </Card.Header>
         <Card.Body css={{ p: 0 }}>
-            <Card.Image
-                src="https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-6/282197946_3147856908836171_8845080577657647221_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=174925&_nc_ohc=coTLSM2ldJ0AX9sDPcB&_nc_ht=scontent.fdac138-1.fna&oh=00_AfC01jYQKFMCmogfTlHkDaQu1w9T-o-GPUqwviCeATt22A&oe=64C81B2B"
+            {/* <Card.Image
+                src="./images.me.jpg"
                 width="100%"
                 height="100%"
                 objectFit="cover"
                 alt="Card example background"
+            /> */}
+            <Image
+                src="/images/me.jpg"
+                alt="My Image"
+                width={500}
+                height={300}
             />
         </Card.Body>
         <Card.Footer
