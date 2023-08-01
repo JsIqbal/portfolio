@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 /* Base styles for the card */
+h2,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+p,
+a {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+}
 .card {
     width: 100%;
     height: fit-content;
