@@ -57,18 +57,21 @@ export default function RootLayout({
                 <Providers
                     themeProps={{ attribute: "class", defaultTheme: "dark" }}
                 >
-                    <div className="relative flex flex-col h-screen">
-                        <Navbar />
-                        <main className="container mx-auto  pt-16 px-6 flex-grow ">
-                            <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
-                                <ProfileSummary />
+                    {/* h-screen */}
+                    <div className="relative flex flex-col  custom-bg">
+                        <div className="layer">
+                            <Navbar />
+                            <main className="container mx-auto  pt-16 px-6 flex-grow ">
+                                <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+                                    <ProfileSummary />
 
-                                <div className="col-span-1 md:col-span-4 relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                                    {children}
+                                    <div className="col-span-1 md:col-span-4 relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md px-0 md:px-10">
+                                        {children}
+                                    </div>
                                 </div>
-                            </div>
-                        </main>
-                        <Footer />
+                            </main>
+                            <Footer />
+                        </div>
                     </div>
                 </Providers>
             </body>
