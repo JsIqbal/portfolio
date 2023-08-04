@@ -3,7 +3,7 @@ const AboutMe = () => {
         <div className="container mx-auto px-4 py-8">
             <div className="mx-auto text-left">
                 {/* Section Heading */}
-                <h2 className="text-3xl  mb-4">About Me</h2>
+                <h1 className="text-3xl  mb-4">About Me</h1>
 
                 {/* First Paragraph */}
                 <p className="mb-4 text-gray-700">
