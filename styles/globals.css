@@ -4,7 +4,6 @@
 /* Base styles for the card */
 h2,
 h2,
-h3,
 h4,
 h5,
 h6 {
@@ -12,6 +11,14 @@ h6 {
     font-weight: 400;
 }
 
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
 p,
 a {
     font-family: "Raleway", sans-serif;
@@ -106,4 +113,26 @@ a {
         width: 40px;
         height: 40px;
     }
+}
+
+.custom-bg {
+    background-image: url(../public/images/bg.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* --cards for about me section-- */
+.card-1 {
+    background: rgb(252, 244, 255);
+}
+
+.card-2 {
+    background: rgb(254, 250, 240);
+}
+
+.card-3 {
+    background: rgb(255, 244, 244);
+}
+
+.card-4 {
+    background: rgb(243, 250, 255);
 }

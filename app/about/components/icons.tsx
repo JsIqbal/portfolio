@@ -8,6 +8,7 @@ export const work: React.ReactNode = (
         strokeWidth={1.5}
         stroke="currentColor"
         className="w-12 h-12"
+        color="rgb(213,102,255)"
     >
         <path
             strokeLinecap="round"
@@ -25,6 +26,7 @@ export const laptop: React.ReactNode = (
         strokeWidth={1.5}
         stroke="currentColor"
         className="w-12 h-12"
+        color="rgb(221,161,12)"
     >
         <path
             strokeLinecap="round"
@@ -42,6 +44,7 @@ export const backend: React.ReactNode = (
         strokeWidth={1.5}
         stroke="currentColor"
         className="w-12 h-12"
+        color="#ff6080"
     >
         <path
             strokeLinecap="round"
@@ -59,6 +62,7 @@ export const ui: React.ReactNode = (
         strokeWidth={1.5}
         stroke="currentColor"
         className="w-12 h-12"
+        color="#4eb1ff"
     >
         <path
             strokeLinecap="round"
